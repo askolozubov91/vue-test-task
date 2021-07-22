@@ -1,0 +1,169 @@
+/* Slide left */
+
+.slide-left- {
+  &leave-from {
+    transform: translateX(0);
+  }
+
+  &leave-to {
+    transform: translateX(calc(-100% - 1rem));
+  }
+
+  &enter-from {
+    transform: translateX(1rem);
+  }
+
+  &enter-to {
+    transform: translateX(-100%);
+  }
+
+  &leave-active,
+  &enter-active {
+    transition: transform .15s cubic-bezier(.14,.37,.28,1);
+  }
+}
+
+/* Slide right */
+
+.slide-right- {
+  &enter-from {
+    transform: translateX(calc(-100% - 1rem));
+  }
+
+  &enter-to {
+    transform: translateX(0);
+  }
+
+  &leave-from {
+    transform: translateX(-100%);
+  }
+
+  &leave-to {
+    transform: translateX(1rem);
+  }
+
+  &enter-active,
+  &leave-active {
+    transition: transform .15s cubic-bezier(.14,.37,.28,1);
+  }
+}
+
+/* Screen change left */
+
+.screen-change-left- {
+  &enter-from {
+    transform: translateX(100%);
+  }
+
+  &enter-active {
+    z-index: 2;
+    transition: transform .35s cubic-bezier(.14,.37,.28,1);
+  }
+
+  &enter-to {
+    transform: translateX(0);
+  }
+
+  &leave-from {
+    transform: translateX(0);
+  }
+
+  &leave-active {
+    z-index: 1;
+    transition: transform .35s cubic-bezier(.14,.37,.28,1);
+  }
+
+  &leave-to {
+    transform: translateX(-40%);
+  }
+}
+
+/* Screen change right */
+
+.screen-change-right- {
+  &enter-from {
+    transform: translateX(-40%);
+  }
+
+  &enter-active {
+    z-index: 1;
+    transition: transform .35s cubic-bezier(.14,.37,.28,1);
+  }
+
+  &enter-to {
+    transform: translateX(0);
+  }
+
+  &leave-from {
+    transform: translateX(0);
+  }
+
+  &leave-active {
+    z-index: 2;
+    transition: transform .35s cubic-bezier(.14,.37,.28,1);
+  }
+
+  &leave-to {
+    transform: translateX(100%);
+  }
+}
+
+/* Screen change down */
+
+.screen-change-down- {
+  &enter-from {
+    transform: translateY(100%);
+  }
+
+  &enter-active {
+    z-index: 2;
+    transition: transform .35s cubic-bezier(.14,.37,.28,1);
+  }
+
+  &enter-to {
+    transform: translateY(0);
+  }
+
+  &leave-from {
+    transform: scale(1);
+  }
+
+  &leave-active {
+    z-index: 1;
+    transition: transform .35s cubic-bezier(.14,.37,.28,1);
+  }
+
+  &leave-to {
+    transform: scale(.9);
+  }
+}
+
+/* Screen change up */
+
+.screen-change-up- {
+  &enter-from {
+    transform: scale(.9);
+  }
+
+  &enter-active {
+    z-index: 1;
+    transition: transform .35s cubic-bezier(.14,.37,.28,1);
+  }
+
+  &enter-to {
+    transform: scale(1);
+  }
+
+  &leave-from {
+    transform: translateY(0);
+  }
+
+  &leave-active {
+    z-index: 2;
+    transition: transform .35s cubic-bezier(.14,.37,.28,1);
+  }
+
+  &leave-to {
+    transform: translateY(100%);
+  }
+}
