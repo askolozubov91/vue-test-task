@@ -23,7 +23,7 @@
         :model-value="state.amount"
         @update:model-value="[UPDATE_AMOUNT]"
         mask="#*"
-        input-mode="number"
+        input-mode="numeric"
       ></InputText>
       <ButtonSubmit class="mt-auto" :disabled="!isFilled" text="Pay"></ButtonSubmit>
     </form>

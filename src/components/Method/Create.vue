@@ -29,7 +29,7 @@
               v-model="state[METHOD_CARD].number"
               mask="#### #### #### ####"
               placeholder="#### #### #### ####"
-              input-mode="number"
+              input-mode="numeric"
             ></InputText>
             <InputText
               :form-name="formName"
@@ -38,7 +38,7 @@
               v-model="state[METHOD_CARD].expiryDate"
               mask="##/##"
               placeholder="##/##"
-              input-mode="number"
+              input-mode="numeric"
             ></InputText>
           </div>
         </transition>
@@ -57,7 +57,7 @@
               v-model="state[METHOD_ACCOUNT].number"
               mask="##########"
               placeholder="##########"
-              input-mode="number"
+              input-mode="numeric"
             ></InputText>
             <InputText
               :form-name="formName"
@@ -66,7 +66,7 @@
               v-model="state[METHOD_ACCOUNT].bsb"
               mask="###-###"
               placeholder="###-###"
-              input-mode="number"
+              input-mode="numeric"
             ></InputText>
           </div>
         </transition>
