@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute top-0 left-0 flex flex-row items-center w-full h-12 border-b border-black">
+  <div class="absolute top-0 left-0 flex flex-row items-center w-full h-12 border-b border-black bg-white">
     <div class="w-12 h-full">
       <button class="w-full h-full" type="button" @click="goBack">
         <IconLeftAngle class="my-4 mx-auto w-4 h-4" />
