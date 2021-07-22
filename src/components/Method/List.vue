@@ -4,11 +4,10 @@
     <div class="h-full p-4 pt-16 overflow-auto">
       <template v-if="cards.length > 0">
         <h2 class="text-xl mb-4">Credit/debit cards</h2>
-        <button
+        <div
           v-for="card in cards"
           :key="card.id"
           class="relative mb-4 last:mb-0 w-full p-4 pt-20 border-2 rounded border-black text-left"
-          type="button"
           @click="selectMethod(card)"
           :class="[card.isCurrent ? 'bg-black text-white' : 'bg-white text-black']"
         >
@@ -21,15 +20,14 @@
           <div class="text-lg">{{ card.fullName }}</div>
           <div class="mt-2">{{ getHiddenCardNumber(card.number) }}</div>
           <div class="absolute bottom-4 right-4">{{ card.expiryDate }}</div>
-        </button>
+        </div>
       </template>
       <template v-if="accounts.length > 0">
         <h2 class="text-xl mt-4 mb-4">Bank accounts</h2>
-        <button
+        <div
           v-for="account in accounts"
           :key="account.id"
           class="relative mb-4 last:mb-0 w-full p-4 pb-20 border-2 rounded border-black text-left"
-          type="button"
           @click="selectMethod(account)"
           :class="[account.isCurrent ? 'bg-black text-white' : 'bg-white text-black']"
         >
@@ -41,7 +39,7 @@
           <div class="text-lg">{{ account.name }}</div>
           <div class="mt-2">{{ account.number }}</div>
           <div class="absolute bottom-4 right-4">{{ account.bsb }}</div>
-        </button>
+        </div>
       </template>
     </div>
   </div>

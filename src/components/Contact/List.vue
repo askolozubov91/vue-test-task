@@ -2,7 +2,7 @@
   <div>
     <ActionsBar title="Select contact" add-route-name="contact-create"></ActionsBar>
     <div class="h-full p-4 pt-16 overflow-auto">
-      <button
+      <div
         v-for="contact in contacts"
         :key="contact.id"
         class="mb-4 last:mb-0 w-full p-2 px-4 border border-black rounded text-left"
@@ -10,10 +10,9 @@
         @click="selectContact(contact)"
         :class="[contact.isCurrent ? 'bg-black text-white' : 'bg-white text-black']"
       >
-        <span class="text-lg capitalize">{{ getContactFullName(contact) }}</span>
-        <br />
-        <span class="text-gray-400">{{ contact.email }}</span>
-      </button>
+        <div class="text-lg capitalize">{{ getContactFullName(contact) }}</div>
+        <div class="text-gray-400">{{ contact.email }}</div>
+      </div>
     </div>
   </div>
 </template>
