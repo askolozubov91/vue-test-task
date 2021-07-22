@@ -4,7 +4,7 @@
     <form :name="formName" class="flex flex-col h-full overflow-auto p-4 pt-16" @submit.prevent="createContact">
       <InputText :form-name="formName" name="first_name" label="First name" v-model="state.firstName"></InputText>
       <InputText :form-name="formName" name="last_name" label="Last name" v-model="state.lastName"></InputText>
-      <InputText :form-name="formName" name="email" label="Email" v-model="state.email" input-type="email"></InputText>
+      <InputText :form-name="formName" name="email" label="Email" v-model="state.email" input-mode="email"></InputText>
       <ButtonSubmit class="mt-auto" :disabled="!isFilled" text="Save"></ButtonSubmit>
     </form>
   </div>
