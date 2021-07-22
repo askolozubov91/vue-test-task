@@ -5,7 +5,7 @@
       :id="id"
       class="rounded"
       v-maska="mask"
-      type="text"
+      :type="inputType"
       :name="name"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
@@ -23,6 +23,10 @@ export default {
     name: String,
     label: String,
     mask: String,
+    inputType: {
+      type: String,
+      default: 'text',
+    },
   },
   emits: ['update:modelValue'],
   setup(props) {

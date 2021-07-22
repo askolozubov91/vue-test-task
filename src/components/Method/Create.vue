@@ -28,6 +28,8 @@
               label="Card number"
               v-model="state[METHOD_CARD].number"
               mask="#### #### #### ####"
+              placeholder="#### #### #### ####"
+              input-type="number"
             ></InputText>
             <InputText
               :form-name="formName"
@@ -35,6 +37,8 @@
               label="Expiry date"
               v-model="state[METHOD_CARD].expiryDate"
               mask="##/##"
+              placeholder="##/##"
+              input-type="number"
             ></InputText>
           </div>
         </transition>
@@ -52,6 +56,8 @@
               label="Account number"
               v-model="state[METHOD_ACCOUNT].number"
               mask="##########"
+              placeholder="##########"
+              input-type="number"
             ></InputText>
             <InputText
               :form-name="formName"
@@ -59,6 +65,8 @@
               label="BSB"
               v-model="state[METHOD_ACCOUNT].bsb"
               mask="###-###"
+              placeholder="###-###"
+              input-type="number"
             ></InputText>
           </div>
         </transition>

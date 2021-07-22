@@ -1,3 +1,7 @@
+## Live demo
+
+https://vue-test-task-eight.vercel.app/
+
 ## Installation
 
 Node.js version used: 15.11.0.  
