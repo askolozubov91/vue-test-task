@@ -9,6 +9,7 @@
       :name="name"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
+      :placeholder="placeholder"
     />
   </div>
 </template>
@@ -27,6 +28,7 @@ export default {
       type: String,
       default: 'text',
     },
+    placeholder: String,
   },
   emits: ['update:modelValue'],
   setup(props) {
