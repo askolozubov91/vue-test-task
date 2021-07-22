@@ -4,6 +4,7 @@
     <input
       :id="id"
       class="rounded"
+      type="text"
       v-maska="mask"
       :inputmode="inputMode"
       :name="name"
